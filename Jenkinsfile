@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                // Use 'mvn' directly since we're relying on the local Maven installation configured above
-                sh 'mvn clean package'
+                // Use 'bat' instead of 'sh' to execute commands on Windows
+                bat 'mvn clean package'
             }
             
             post {
